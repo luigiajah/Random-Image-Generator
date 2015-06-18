@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 
 <head runat="server">
     <title>Любовное Гадание на Бобре</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<script>
 var random_images_array = ["love_01.png", "love_02.png","love_03.png","love_04.png","love_05.png",
 							"love_06.png", "love_07.png","love_08.png","love_09.png","love_10.png",
@@ -23,6 +24,7 @@ function getRandomImage(imgAr, path) {
     var img = imgAr[ num ];
     var imgStr = '<img src="' + path + img + '" alt = "">';
 	return imgStr;
+	
 }
 
 function displayAnswer(){
@@ -35,19 +37,20 @@ function displayAnswer(){
 </head>
 
 <body>
-    <div id="header">
-        <h1>Любовное Гадание на Бобре</h1>
-		<h4>Нажми на бобра, и узнайте что вам будущее сулит!</h4>
+<div class="container" background-color="white" align="center">
+    <div id="header" class="row center-block col-md-12">
+        <img src="images/title.png">
     </div>
 
-<div id="nav">
+<div id="nav" class="row center-block">
 
 <p><button type="button" onclick="displayAnswer()"><img src="images/beaver_01.png"></button></p>
 
 </div>    
 
-<div id="Love">
+<div id="Love" class="row center-block">
 
+</div>
 </div>
 
 </body>
