@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+
+<head runat="server">
+    <title>Любовное Гадание на Бобре</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+var random_images_array = ["love_01.png", "love_02.png","love_03.png","love_04.png","love_05.png",
+							"love_06.png", "love_07.png","love_08.png","love_09.png","love_10.png",
+							"love_11.png", "love_12.png","love_13.png","love_14.png","love_15.png",
+							"love_16.png", "love_17.png","love_18.png","love_19.png","love_20.png",
+							"love_21.png", "love_22.png","love_23.png","love_24.png","love_25.png",
+							"love_26.png", "love_27.png","love_28.png","love_29.png","love_30.png",
+							"love_31.png", "love_32.png","love_33.png","love_34.png","love_35.png",
+							"love_36.png", "love_37.png","love_38.png","love_39.png","love_40.png",
+							"love_41.png", "love_42.png","love_43.png","love_44.png","love_45.png",
+							];
+
+function getRandomImage(imgAr, path) {
+    path = path || 'RU/'; // default path here
+    var num = Math.floor( Math.random() * imgAr.length );
+    var img = imgAr[ num ];
+    var imgStr = '<img src="' + path + img + '" alt = "">';
+	return imgStr;
+}
+
+function displayAnswer(){
+	var paragraph = document.getElementById("Love");
+	var display = getRandomImage(random_images_array, 'RU/');
+	paragraph.innerHTML = display;
+}
+
+</script>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Любовное Гадание на Бобре</h1>
+		<h4>Нажми на бобра, и узнайте что вам будущее сулит!</h4>
+    </div>
+
+<div id="nav">
+
+<p><button type="button" onclick="displayAnswer()"><img src="images/beaver_01.png"></button></p>
+
+</div>    
+
+<div id="Love">
+
+</div>
+
+</body>
+</html>
